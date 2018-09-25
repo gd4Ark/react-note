@@ -1,0 +1,209 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+  color:inherit;
+}
+html{
+  font-size:14px;
+}
+html,body{
+  width:100%;
+}
+button img{
+  width:100%;
+  height:100%;
+}
+.small-btn{
+  width:18px;
+  height:18px;
+  border:none;
+  background: transparent;
+  cursor: pointer;
+}
+.big-btn{
+  width:100%;
+  height:100%;
+}
+input[type=text]{
+  border:1px solid transparent;
+  outline:none;
+  transition: all 0.5s ease;
+}
+#root{
+  width:100%;
+  height:100%;
+}
+.flex{
+  display: flex;
+  align-items:center;
+  justify-content:center;
+}
+.container{
+  width:100%;
+  height:100%;
+}
+.App{
+  box-sizing: border-box;
+  padding: 5px;
+  background:#444;
+  min-height: 100vh;
+}
+.note-container{
+  display: flex;
+  align-items:center;
+  justify-content:space-around;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.note-box{
+  margin: 10px;
+  box-sizing: border-box;
+  padding: 0 10px;
+  width:400px;
+  background:white;
+  border-radius: 3px;
+}
+.note-box > div{
+  width:100%;
+}
+.note-header{
+  height:40px;
+  justify-content: space-between;
+}
+.note-title{
+  width:90%;
+  font-size:1.2rem;
+}
+.note-title:focus{
+  border-bottom: 1px solid #4da3ff;
+  cursor: text;
+}
+.note-body{
+  height:70%;
+}
+.note-list-item{
+  margin: 3px 0;
+  justify-content: space-between;
+  width:100%;
+  height:25px;
+}
+.note-list-item,
+.note-list-item *{
+  cursor: pointer;
+}
+.note-list-item-select{
+  display: none;
+}
+.note-list-item-select + label{
+  position: relative;
+  width:18px;
+  height:18px;
+  background:white;
+  border:1px solid #ddd;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+.note-list-item-select:checked + label{
+  border:1px solid transparent;
+}
+.note-list-item-select:checked + label:after{
+  content: '\2714';
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  font-size:0.4rem;
+}
+.note-list-item-content{
+  width:80%;
+  background:transparent;
+  font-size:1rem;
+  text-align: left;
+  border-bottom: 1px solid transparent;
+}
+.note-list-item-content:focus{
+  border-bottom: 1px solid #4da3ff;
+  cursor: text;
+}
+.note-list-item-content.complete{
+  color:#888;
+  font-weight: lighter;
+  text-decoration: line-through;
+}
+.note-list-item-remove-btn{
+  width:18px;
+  height:18px;
+}
+.note-footer{
+  height:40px;
+}
+.note-footer-add-box input{
+  height:100%;
+  flex: 1;
+  border: none;
+}
+
+/* context menu */
+.context-menu{
+  position: absolute;
+  top:0;
+  left:0;
+  width:150px;
+}
+.context-menu ul,
+.context-menu li{
+  width:100%;
+}
+.context-menu li{
+  padding: 0 10px;
+  display: flex;
+  align-items:center;
+  height:40px;
+  text-align: left;
+  cursor: pointer;
+  background:white;
+}
+.context-menu li:hover{
+  background: #50bbee;
+  color:white;
+}
+
+/* transition group */
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+  .example-leave {
+    opacity: 1;
+  }
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+.example-appear {
+  opacity: 0.01;
+}
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+
+@media screen and (max-width:420px){
+  .note-box{
+    width: 100%;
+  }
+}
